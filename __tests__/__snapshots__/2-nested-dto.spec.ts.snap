@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nested dto nested dto 1`] = `
+Array [
+  Object {
+    "name": "nested.dto.ts",
+    "text": "export interface NestedDto {
+    a: number;
+    b: string;
+}
+",
+  },
+  Object {
+    "name": "simple.dto.ts",
+    "text": "import { NestedDto } from \\"./nested.dto\\";
+
+export interface SimpleDto {
+    foo: number;
+    bar: NestedDto;
+}
+",
+  },
+]
+`;

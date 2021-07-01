@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jsdoc supports jsdoc 1`] = `
+Array [
+  Object {
+    "name": "nested.dto.ts",
+    "text": "export interface NestedDto {
+    /** I am a prop js doc */
+    a: number;
+    b: string;
+}
+",
+  },
+  Object {
+    "name": "simple.dto.ts",
+    "text": "import { NestedDto } from \\"./nested.dto\\";
+
+/**
+ * I am a class jsdoc
+ */
+export interface SimpleDto extends NestedDto {
+    /** I am a prop js doc */
+    randomProp: boolean;
+}
+",
+  },
+]
+`;

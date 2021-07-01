@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extends types extends types 1`] = `
+Array [
+  Object {
+    "name": "nested.dto.ts",
+    "text": "export interface NestedDto {
+    a: number;
+    b: string;
+}
+",
+  },
+  Object {
+    "name": "simple.dto.ts",
+    "text": "import { NestedDto } from \\"./nested.dto\\";
+
+export interface SimpleDto extends NestedDto {
+    randomProp: boolean;
+}
+",
+  },
+]
+`;

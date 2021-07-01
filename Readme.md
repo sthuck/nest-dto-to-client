@@ -1,0 +1,1 @@
+Simple project to extract client types from @nest js dtos without dragging un-needed dependencies into the client. 

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extends partial types extends partial types 1`] = `
+Array [
+  Object {
+    "name": "nested.dto.ts",
+    "text": "export interface NestedDto {
+    a: number;
+    b: string;
+    c: boolean;
+}
+",
+  },
+  Object {
+    "name": "simple.dto.ts",
+    "text": "import { NestedDto } from \\"./nested.dto\\";
+
+export interface SimpleDto extends Pick<NestedDto, 'a'|'c'> {
+}
+
+export interface SimpleDto2 extends Omit<NestedDto, 'a'|'c'> {
+}
+",
+  },
+]
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`simple dto simple dto 1`] = `
+Array [
+  Object {
+    "name": "simple.dto.ts",
+    "text": "export interface SimpleDto {
+    foo: number;
+    bar: string;
+    optionalProp?: string;
+}
+",
+  },
+]
+`;
