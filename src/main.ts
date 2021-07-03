@@ -1,5 +1,6 @@
 import { Project } from 'ts-morph';
 import { ExtractInterface } from './extract-interface';
+import * as path from 'path';
 
 export const main = async (tsConfigPath) => {
   const project = new Project({ tsConfigFilePath: tsConfigPath });
@@ -15,7 +16,10 @@ export const main = async (tsConfigPath) => {
     imports.forEach((i) => {
       const importedFrom = i.getModuleSpecifier().getLiteralValue();
       if (importedFrom.includes('.dto')) {
-        outputFile.addImportDeclaration(i.getStructure());
+        const importStructure = i.getStructure();
+        importStructure.moduleSpecifier =
+          '.' + path.sep + path.basename(importStructure.moduleSpecifier);
+        outputFile.addImportDeclaration(importStructure);
       }
     });
 
